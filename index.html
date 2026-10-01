@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        body{
+            margin: 0;
+        }
+
+        #office{
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+
+            background: url("office.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            overflow: hidden;
+        }
+
+        /* 키보드 */
+        #keyboard{
+            position: absolute;
+            width: 300px;
+            left: 100px;
+            top: 550px;
+            cursor: pointer;
+        }
+
+        /* 마우스 */
+        #mouse{
+            position: absolute;
+            width: 140px;
+            right: 150px;
+            top: 500px;
+            cursor: pointer;
+        }
+
+        /* 펜 */
+        #pen{
+            position: absolute;
+            width: 200px;
+            left: 80px;
+            top: 200px;
+            cursor: pointer;
+        }
+
+        /* 구두 */
+        #shoes{
+            position: absolute;
+            width: 250px;
+            right: 400px;
+            top: 600px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<div id="office">
+
+    <!-- 키보드 -->
+    <img src="keyboard.png" id="keyboard">
+    <audio src="keyboard.mp3" id="keyboardSound" loop></audio>
+
+
+    <!-- 마우스 -->
+    <img src="mouse.png" id="mouse">
+    <audio src="mouse.mp3" id="mouseSound" loop></audio>
+
+
+    <!-- 펜 -->
+    <img src="pen.png" id="pen">
+    <audio src="pen.mp3" id="penSound" loop></audio>
+
+
+    <!-- 구두 -->
+    <img src="shoes.png" id="shoes">
+    <audio src="shoes.mp3" id="shoesSound" loop></audio>
+
+</div>
+
+
+
+<script>
+
+    // 키보드
+    let state1 = false;
+
+    keyboard.onclick = function(){
+
+        if(!state1){
+            keyboardSound.play();
+            state1 = true;
+
+        }else{
+            keyboardSound.pause();
+            state1 = false;
+        }
+
+    }
+
+
+    // 마우스
+    let state2 = false;
+
+    mouse.onclick = function(){
+
+        if(!state2){
+            mouseSound.play();
+            state2 = true;
+
+        }else{
+            mouseSound.pause();
+            state2 = false;
+        }
+
+    }
+
+
+    // 펜
+    let state3 = false;
+
+    pen.onclick = function(){
+
+        if(!state3){
+            penSound.play();
+            state3 = true;
+
+        }else{
+            penSound.pause();
+            state3 = false;
+        }
+
+    }
+
+
+    // 구두
+    let state4 = false;
+
+    shoes.onclick = function(){
+
+        if(!state4){
+            shoesSound.play();
+            state4 = true;
+
+        }else{
+            shoesSound.pause();
+            state4 = false;
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>
